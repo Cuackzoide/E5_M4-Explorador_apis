@@ -30,3 +30,20 @@ botonXHR.addEventListener("click", () => {
   };
   xhr.send();
 });
+
+// Parte 2 : Fetch
+
+botonFetch.addEventListener("click", () => {
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+      if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
+      return response.json();
+    })
+    .then((data) => {
+      renderizarUsuarios(data);
+      resultado.appendChild(lista);
+    })
+    .catch((error) => {
+      console.error("Error de red o conexión:", error);
+    });
+});
