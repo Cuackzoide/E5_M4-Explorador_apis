@@ -43,8 +43,27 @@
     <button id="cargar-xhr">Cargar Usuarios (XHR)</button>
     <button id="cargar-fetch">Cargar Usuarios (Fetch)</button>
 
-    <div id="resultado" class="container"></div>
-
+    <div id="resultado" class="container">
+      <!--Aqui se renderizan los usuarios con XHR o Fetch-->
+    </div>
+    <hr />
+    <div>
+      <label>
+        Busqueda en giphy:
+        <input id="search-input" type="text" placeholder="Escribe Aqui" />
+      </label>
+      <label>
+        Cantidad de resultados:
+        <span id="range-value">6</span>
+        <input type="range" min="1" max="10" id="search-range" />
+      </label>
+      <label>
+        <button id="search-button">🔍Buscar</button>
+      </label>
+    </div>
+    <div class="container" id="giphy">
+      <!-- Aqui se renderizan los gifts-->
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
